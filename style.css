@@ -1,20 +1,107 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f0f0f0;
+    background: linear-gradient(135deg, #f06, #48f);
     margin: 0;
+    color: #fff;
 }
 
 .page {
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    width: 100%;
+    width: 90%;
     max-width: 400px;
     padding: 20px;
-    background
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.page.active {
+    display: flex;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #48f;
+    color: white;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #357ae8;
+}
+
+.todo-container {
+    width: 100%;
+    margin-top: 20px;
+}
+
+#todo-input {
+    width: calc(100% - 70px);
+    padding: 10px;
+    border: 2px solid #48f;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+#add-button {
+    width: 60px;
+    padding: 10px;
+    border: none;
+    background-color: #48f;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#todo-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+    width: 100%;
+}
+
+li {
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+li.completed {
+    text-decoration: line-through;
+    color: #777;
+}
+
+button.delete-button {
+    background-color: #f44336;
+    border: none;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+button.delete-button:hover {
+    background-color: #e53935;
 }
