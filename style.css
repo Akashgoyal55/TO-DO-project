@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Roboto', sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,18 +19,25 @@ body {
     width: 90%;
     max-width: 400px;
     padding: 20px;
-    background-color: rgba(239, 235, 235, 0.9);
+    background-color: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.5s ease-in-out;
 }
 
 .page.active {
     display: flex;
 }
 
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
 h1 {
     margin-bottom: 20px;
     font-size: 1.5em;
+    color: #333;
 }
 
 button {
@@ -39,11 +48,12 @@ button {
     color: white;
     font-size: 1em;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 button:hover {
     background-color: #357ae8;
+    transform: scale(1.05);
 }
 
 .todo-container {
@@ -67,6 +77,12 @@ button:hover {
     color: white;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#add-button:hover {
+    background-color: #357ae8;
+    transform: scale(1.05);
 }
 
 #todo-list {
@@ -85,7 +101,7 @@ li {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 li.completed {
@@ -94,14 +110,20 @@ li.completed {
 }
 
 button.delete-button {
-    background-color: #f44336;
+    background-color: transparent;
     border: none;
-    color: white;
-    border-radius: 5px;
-    padding: 5px 10px;
+    color: #f44336;
+    font-size: 1.2em;
     cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 button.delete-button:hover {
-    background-color: #e53935;
+    color: #e53935;
+    transform: scale(1.2);
+}
+
+li:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.02);
 }

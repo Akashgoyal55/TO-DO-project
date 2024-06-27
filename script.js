@@ -16,7 +16,7 @@ document.getElementById('add-button').addEventListener('click', function() {
         listItem.appendChild(textNode);
 
         const deleteButton = document.createElement('button');
-        deleteButton.innerText = 'Delete';
+        deleteButton.innerHTML = '<i class="fas fa-trash-alt"></i>';
         deleteButton.classList.add('delete-button');
         deleteButton.addEventListener('click', function() {
             todoList.removeChild(listItem);
@@ -31,3 +31,4 @@ document.getElementById('add-button').addEventListener('click', function() {
         todoInput.value = '';
     }
 });
+
